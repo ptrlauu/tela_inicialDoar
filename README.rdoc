@@ -1,0 +1,1 @@
+Projeto desenvolvido na maratona dev 2020 da rocketseat, apresenta um pequeno problema no banco de dados que ainda nao consigo resolver.

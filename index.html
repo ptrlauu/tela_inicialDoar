@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+    maratona dev 2k20 /o/ 
+-->
+<html>
+
+<head>
+    <title>Donate blood, donate life. </title>
+
+    <link rel="stylesheet" href="styling.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <img 
+            class = "logo"    
+            src="logo.jpg" 
+            alt = "Donate blood, save lifes image."
+        >
+        <h2>What are you waiting for?</h2>
+        <p>You can save 3 lives with a single donation.</p>
+        <p>We need more than 30 thousand daily donations.</p>
+        <p>Only 1,9% of brazilians donate blood, help us change this reality!</p>
+
+
+        <button>I want to help</button>
+
+    </header> 
+
+    <section class="form hide">
+        <h2>Get into the donator's list right now</h2>
+        <form action="/"  method = "POST">
+            <input 
+                type="text"
+                name="name"
+                placeholder="Full name"
+            >
+            <input 
+                type="text"
+                name="email"
+                placeholder="Email"
+            >
+            <input 
+                type="text"
+                name="blood"
+                placeholder="Bloodtype"
+            >
+            <button>I want to help</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Latest<span> donators</span></h2>
+
+        <section class="donors">
+
+            {%for donor in donors%}<!-- loopando no html  -->
+
+                <div class="donor">
+                    <div class="blood">{{donor.blood}}</div>
+                    <p>{{donor.name}}</p>
+                </div>
+            {%endfor%}
+
+        </section>
+    </main>
+
+    <footer>With ❤, laura. </footer>
+
+    <script src="script.js"></script>
+</body>
+</head>
+
+
+</html>
